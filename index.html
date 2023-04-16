@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <link rel="shortcut icon" href="img/icono.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <a href="index.html"><img src="img/logo.png" alt="" /></a>
+  </head>
+  <body>
+    <main>Este programa Encripta y Desencripta texto</main>
+    <div class="container">
+      <div class="encriptar">
+        <input
+          type="text"
+          onkeyup="this.value = this.value.toLowerCase();"
+          onkeydown="return (event.keyCode >= 65 && event.keyCode <= 90) || (event.keyCode >= 97 && event.keyCode <= 122) || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 32;"
+          name="texto"
+          class="texto"
+          id="texto"
+          cols="30"
+          rows="10"
+          placeholder="Ingresa texto para procesar aquí"
+        ><button class="btn-copiartexto" type="button"  onclick="copiarTexto()">Copiar Texto</button></input>
+          
+
+        <div class="terminos">
+          <p>Solo digitar letras minúsculas , sin numeros, sin acentos y caracteres especiales.</p>
+        </div>
+        
+        
+        
+        
+        
+        <div class="botones">
+          <button class="btn-encriptar" type="button" onclick="encriptar()">
+            Encriptar
+          </button>
+          
+          <input
+            type="button"
+            class="btn-desencriptar"
+            value="Desencriptar"
+            onclick="desencriptar()"
+          />
+          
+          
+        </div>
+      </div>
+      <div class="encriptado">
+        <img src="img/muñeco.png" alt="" id="muñeco" />
+        <div class="mensaje-encriptado" id="mensaje-encriptado">
+          <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+          <p id="parrafo">
+            Ingresa el texto que deseas encriptar o desencriptar
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>Desarrollado por: Julian David Briceño Peñuela</p>
+      
+    </footer>
+  </body>
+  <script src="index.js"></script>
+</html>
